@@ -39,9 +39,8 @@ namespace Taller_2_BD
             this.inputNombre = new System.Windows.Forms.TextBox();
             this.inputDireccion = new System.Windows.Forms.TextBox();
             this.inputTelefono = new System.Windows.Forms.TextBox();
-            this.inputSaldo = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.inputSaldo)).BeginInit();
+            this.inputSaldo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -138,13 +137,6 @@ namespace Taller_2_BD
             this.inputTelefono.Size = new System.Drawing.Size(100, 23);
             this.inputTelefono.TabIndex = 9;
             // 
-            // inputSaldo
-            // 
-            this.inputSaldo.Location = new System.Drawing.Point(338, 237);
-            this.inputSaldo.Name = "inputSaldo";
-            this.inputSaldo.Size = new System.Drawing.Size(120, 23);
-            this.inputSaldo.TabIndex = 10;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -156,14 +148,21 @@ namespace Taller_2_BD
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // inputSaldo
+            // 
+            this.inputSaldo.Location = new System.Drawing.Point(347, 237);
+            this.inputSaldo.Name = "inputSaldo";
+            this.inputSaldo.Size = new System.Drawing.Size(100, 23);
+            this.inputSaldo.TabIndex = 12;
+            // 
             // AddCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.inputSaldo);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.inputTelefono);
             this.Controls.Add(this.inputDireccion);
             this.Controls.Add(this.inputNombre);
@@ -176,7 +175,7 @@ namespace Taller_2_BD
             this.Controls.Add(this.label1);
             this.Name = "AddCliente";
             this.Text = "AddCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.inputSaldo)).EndInit();
+            this.Load += new System.EventHandler(this.AddCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +193,7 @@ namespace Taller_2_BD
         private System.Windows.Forms.TextBox inputNombre;
         private System.Windows.Forms.TextBox inputDireccion;
         private System.Windows.Forms.TextBox inputTelefono;
-        private System.Windows.Forms.NumericUpDown inputSaldo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox inputSaldo;
     }
 }

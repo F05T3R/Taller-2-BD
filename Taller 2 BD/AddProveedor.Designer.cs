@@ -131,6 +131,7 @@ namespace Taller_2_BD
             this.Controls.Add(this.label1);
             this.Name = "AddProveedor";
             this.Text = "AddProveedor";
+            this.Load += new System.EventHandler(this.AddProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

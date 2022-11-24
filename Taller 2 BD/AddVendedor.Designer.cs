@@ -33,9 +33,9 @@ namespace Taller_2_BD
             this.label2 = new System.Windows.Forms.Label();
             this.inputNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputSalario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.inputFecha = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -79,12 +79,12 @@ namespace Taller_2_BD
             this.label3.TabIndex = 3;
             this.label3.Text = "SALARIO";
             // 
-            // textBox1
+            // inputSalario
             // 
-            this.textBox1.Location = new System.Drawing.Point(350, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 4;
+            this.inputSalario.Location = new System.Drawing.Point(350, 196);
+            this.inputSalario.Name = "inputSalario";
+            this.inputSalario.Size = new System.Drawing.Size(100, 23);
+            this.inputSalario.TabIndex = 4;
             // 
             // label4
             // 
@@ -97,12 +97,12 @@ namespace Taller_2_BD
             this.label4.TabIndex = 5;
             this.label4.Text = "FECHA CONTRATACIÓN";
             // 
-            // dateTimePicker1
+            // inputFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(300, 282);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 6;
+            this.inputFecha.Location = new System.Drawing.Point(300, 282);
+            this.inputFecha.Name = "inputFecha";
+            this.inputFecha.Size = new System.Drawing.Size(200, 23);
+            this.inputFecha.TabIndex = 6;
             // 
             // button1
             // 
@@ -122,15 +122,16 @@ namespace Taller_2_BD
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.inputFecha);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputSalario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.inputNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddVendedor";
             this.Text = "AddVendedor";
+            this.Load += new System.EventHandler(this.AddVendedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,9 +143,9 @@ namespace Taller_2_BD
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox inputNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputSalario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker inputFecha;
         private System.Windows.Forms.Button button1;
     }
 }

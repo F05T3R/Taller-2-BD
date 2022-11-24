@@ -105,6 +105,7 @@ namespace Taller_2_BD
             // 
             this.inputMontoFinal.Location = new System.Drawing.Point(346, 231);
             this.inputMontoFinal.Name = "inputMontoFinal";
+            this.inputMontoFinal.ReadOnly = true;
             this.inputMontoFinal.Size = new System.Drawing.Size(100, 23);
             this.inputMontoFinal.TabIndex = 6;
             // 
@@ -149,11 +150,11 @@ namespace Taller_2_BD
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(637, 395);
+            this.button1.Location = new System.Drawing.Point(623, 395);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 43);
+            this.button1.Size = new System.Drawing.Size(165, 43);
             this.button1.TabIndex = 11;
-            this.button1.Text = "INGRESAR";
+            this.button1.Text = "SIGUIENTE";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // OrdenCompra
