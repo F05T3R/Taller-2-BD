@@ -28,7 +28,7 @@ namespace Taller_2_BD
                     {
                         ConexMySQL conex = new ConexMySQL();
                         conex.open();
-                        string query = "INSERT INTO Proveedor (rut, nombre, direccion) VALUES ('" + inputRUT + "', '" + inputNombre + "', '" + inputDireccion + "')";
+                        string query = "INSERT INTO Proveedor (rut, nombre, direccion) VALUES ('" + inputRUT.Text + "', '" + inputNombre.Text + "', '" + inputDireccion.Text + "')";
                         int response = conex.executeNonQuery(query);
 
                         if (response != -1) MessageBox.Show("Se ha agregado el proveedor");

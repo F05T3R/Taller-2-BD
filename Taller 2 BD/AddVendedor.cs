@@ -36,7 +36,7 @@ namespace Taller_2_BD
                         {
                             ConexMySQL conex = new ConexMySQL();
                             conex.open();
-                            string query = "INSERT INTO Vendedor (nombre, salario, fecha_contratacion) VALUES ('" + inputNombre + "', '" + auxSalario + "', '" + auxFecha + "')";
+                            string query = "INSERT INTO Vendedor (nombre, salario, fecha_contratacion) VALUES ('" + inputNombre.Text + "', '" + auxSalario + "', '" + auxFecha + "')";
                             int response = conex.executeNonQuery(query);
 
                             if (response != -1) MessageBox.Show("Se ha agregado el vendedor");

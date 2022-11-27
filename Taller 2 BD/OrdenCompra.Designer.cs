@@ -156,6 +156,7 @@ namespace Taller_2_BD
             this.button1.TabIndex = 11;
             this.button1.Text = "SIGUIENTE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OrdenCompra
             // 
@@ -177,6 +178,7 @@ namespace Taller_2_BD
             this.Controls.Add(this.label1);
             this.Name = "OrdenCompra";
             this.Text = "OrdenCompra";
+            this.Load += new System.EventHandler(this.OrdenCompra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
