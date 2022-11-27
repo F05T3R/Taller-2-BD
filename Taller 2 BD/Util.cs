@@ -64,7 +64,7 @@ namespace Util
         {
             ConexMySQL conex = new ConexMySQL();
             conex.open();
-            string query = "SELECT rut FROM Vendedor WHERE nombre = '" + nombreVendedor + "'";
+            string query = "SELECT numero FROM Vendedor WHERE nombre = '" + nombreVendedor + "'";
             return conex.selectQueryScalar(query);
         }
 
@@ -112,6 +112,7 @@ namespace Util
             for (int i = 0; i < clienteTable.Rows.Count; i++)
             {
                 comboBox.Items.Add(clienteTable.Rows[i]["nombre"]);
+                
             }
             conex.close();
         }

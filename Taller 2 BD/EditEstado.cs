@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -20,25 +21,33 @@ namespace Taller_2_BD
         private void button1_Click(object sender, EventArgs e)
         {
             //Validar que todos los campos estén completados
-            if (inputRUT.Text != "" && inputEstado.Text != "")
+            if (inputRUT.Text != "")
             {
-
                 string clienteCode = MyUtil.FoundClienteCode(inputRUT.Text);
-                string clienteState = MyUtil.FoundClienteEstado(inputEstado.Text);
-                ConexMySQL conex = new ConexMySQL();
-                conex.open();
-                string querySelect = "SELECT estado FROM Cliente WHERE rut = '" + clienteCode + "'";
-                string selectEstado = conex.selectQueryScalar(querySelect); //almacena la query
-                if (clienteState != selectEstado) //la nueva modificación es distinta a lo encontró
+                DialogResult result = MessageBox.Show("Está seguro que desea modificar estos datos?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning); //result almacena el tipo de boton que apreto el usuario
+                if (result.Equals(DialogResult.Yes)) //selecciona el boton que esta seguro
                 {
-                    DialogResult result = MessageBox.Show("Está seguro que desea modificar estos datos?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning); //result almacena el tipo de boton que apreto el usuario
-                    if (result.Equals(DialogResult.Yes)) //selecciona el boton que esta seguro
+                    try
                     {
-                        string query = "UPDATE Cliente SET estado = '" + clienteState + "' where rut = '" + input + "'";
+                        ConexMySQL conex = new ConexMySQL();
+                        conex.open();
+                        bool clienteState = false;
+                        string query = "UPDATE Cliente SET estado = " + clienteState + " WHERE rut = '" + clienteCode + "'";
+                        int response = conex.executeNonQuery(query);
+                        if (response != -1) MessageBox.Show("Se ha desactivado al cliente");
+                        else MessageBox.Show("Ha ocurrido un error, no se pudo desactivar al cliente", "ERROR");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Hubo un problema con la conexión.", "ERROR");
                     }
                 }
-
             }
+            else
+            {
+                MessageBox.Show("Debe completar todos los campos");
+            }
+            
         }
 
         private void EditEstado_Load(object sender, EventArgs e)

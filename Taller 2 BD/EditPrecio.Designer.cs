@@ -53,11 +53,11 @@ namespace Taller_2_BD
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(311, 103);
+            this.label2.Location = new System.Drawing.Point(272, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 33);
+            this.label2.Size = new System.Drawing.Size(257, 33);
             this.label2.TabIndex = 2;
-            this.label2.Text = "ID PRODUCTO";
+            this.label2.Text = "NOMBRE PRODUCTO";
             // 
             // inputIDProducto
             // 
@@ -94,6 +94,7 @@ namespace Taller_2_BD
             this.button1.TabIndex = 8;
             this.button1.Text = "ACTUALIZAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditPrecio
             // 
@@ -109,6 +110,7 @@ namespace Taller_2_BD
             this.Controls.Add(this.label1);
             this.Name = "EditPrecio";
             this.Text = "EditPrecio";
+            this.Load += new System.EventHandler(this.EditPrecio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

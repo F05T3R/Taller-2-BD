@@ -33,7 +33,7 @@ namespace Taller_2_BD
             this.label2 = new System.Windows.Forms.Label();
             this.inputNumero = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputSalario = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,11 +53,11 @@ namespace Taller_2_BD
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(269, 108);
+            this.label2.Location = new System.Drawing.Point(271, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 33);
+            this.label2.Size = new System.Drawing.Size(259, 33);
             this.label2.TabIndex = 3;
-            this.label2.Text = "NÚMERO VENDEDOR";
+            this.label2.Text = "NOMBRE VENDEDOR";
             // 
             // inputNumero
             // 
@@ -78,12 +78,12 @@ namespace Taller_2_BD
             this.label4.TabIndex = 8;
             this.label4.Text = "SALARIO";
             // 
-            // textBox1
+            // inputSalario
             // 
-            this.textBox1.Location = new System.Drawing.Point(341, 241);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 23);
-            this.textBox1.TabIndex = 9;
+            this.inputSalario.Location = new System.Drawing.Point(341, 241);
+            this.inputSalario.Name = "inputSalario";
+            this.inputSalario.Size = new System.Drawing.Size(120, 23);
+            this.inputSalario.TabIndex = 9;
             // 
             // button1
             // 
@@ -94,6 +94,7 @@ namespace Taller_2_BD
             this.button1.TabIndex = 10;
             this.button1.Text = "ACTUALIZAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditSalario
             // 
@@ -102,13 +103,14 @@ namespace Taller_2_BD
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputSalario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.inputNumero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditSalario";
             this.Text = "EditSalario";
+            this.Load += new System.EventHandler(this.EditSalario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +122,7 @@ namespace Taller_2_BD
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox inputNumero;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputSalario;
         private System.Windows.Forms.Button button1;
     }
 }

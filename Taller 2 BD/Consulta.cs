@@ -14,5 +14,28 @@ namespace Taller_2_BD
         {
             InitializeComponent();
         }
+
+        private void Consulta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Listados listados = new Listados();
+            listados.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListaCantidad listaCantidad = new ListaCantidad();
+            listaCantidad.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ListadosEspecificos listadosEspecificos = new ListadosEspecificos();
+            listadosEspecificos.Show();
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace Taller_2_BD
             this.label2 = new System.Windows.Forms.Label();
             this.inputRUT = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputSaldo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,11 +53,11 @@ namespace Taller_2_BD
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(312, 106);
+            this.label2.Location = new System.Drawing.Point(285, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 33);
+            this.label2.Size = new System.Drawing.Size(231, 33);
             this.label2.TabIndex = 2;
-            this.label2.Text = "RUT CLIENTE";
+            this.label2.Text = "NOMBRE CLIENTE";
             // 
             // inputRUT
             // 
@@ -78,12 +78,12 @@ namespace Taller_2_BD
             this.label3.TabIndex = 4;
             this.label3.Text = "SALDO";
             // 
-            // textBox1
+            // inputSaldo
             // 
-            this.textBox1.Location = new System.Drawing.Point(340, 239);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 10;
+            this.inputSaldo.Location = new System.Drawing.Point(340, 239);
+            this.inputSaldo.Name = "inputSaldo";
+            this.inputSaldo.Size = new System.Drawing.Size(121, 23);
+            this.inputSaldo.TabIndex = 10;
             // 
             // button1
             // 
@@ -94,6 +94,7 @@ namespace Taller_2_BD
             this.button1.TabIndex = 11;
             this.button1.Text = "ACTUALIZAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditSaldo
             // 
@@ -102,13 +103,14 @@ namespace Taller_2_BD
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputSaldo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.inputRUT);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditSaldo";
             this.Text = "EditSaldo";
+            this.Load += new System.EventHandler(this.EditSaldo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +122,7 @@ namespace Taller_2_BD
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox inputRUT;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputSaldo;
         private System.Windows.Forms.Button button1;
     }
 }
