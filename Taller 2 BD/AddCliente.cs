@@ -37,7 +37,7 @@ namespace Taller_2_BD
                             ConexMySQL conex = new ConexMySQL();
                             conex.open();
                             bool estadoCliente = true;
-                            string query = "INSERT INTO Cliente (rut, nombre, saldo, direccion, telefono, estado) VALUES ('" + inputRUT.Text + "', '" + inputNombre.Text + "', '" + auxSaldo + "', '" + inputDireccion.Text + "', '" + auxTelefono + "', '" + estadoCliente + "')";
+                            string query = "INSERT INTO Cliente (rut, nombre, saldo, direccion, telefono, estado) VALUES ('" + inputRUT.Text + "', '" + inputNombre.Text + "', '" + auxSaldo + "', '" + inputDireccion.Text + "', '" + auxTelefono + "', " + estadoCliente + ")";
                             int response = conex.executeNonQuery(query);
 
                             if (response != -1) MessageBox.Show("Se ha agregado al cliente");

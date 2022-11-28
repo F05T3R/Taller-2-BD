@@ -34,6 +34,10 @@ namespace Taller_2_BD
                         bool clienteState = false;
                         string query = "UPDATE Cliente SET estado = " + clienteState + " WHERE rut = '" + clienteCode + "'";
                         int response = conex.executeNonQuery(query);
+                        if (clienteState == false)
+                        {
+                            MessageBox.Show("Este cliente ya ha sido inhabilitado");
+                        }
                         if (response != -1) MessageBox.Show("Se ha desactivado al cliente");
                         else MessageBox.Show("Ha ocurrido un error, no se pudo desactivar al cliente", "ERROR");
                     }
