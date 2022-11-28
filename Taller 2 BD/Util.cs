@@ -36,27 +36,11 @@ namespace Util
             return conex.selectQueryScalar(query);
         }
 
-        public static int FoundProductoPrecio(int precioProducto)
-        {
-            ConexMySQL conex = new ConexMySQL();
-            conex.open();
-            string query = "SELECT id FROM Producto WHERE precio = '" + precioProducto + "'";
-            return conex.executeNonQuery(query);
-        }
-
         public static string FoundClienteCode(string nombreCliente)
         {
             ConexMySQL conex = new ConexMySQL();
             conex.open();
             string query = "SELECT rut FROM Cliente WHERE nombre = '" + nombreCliente + "'";
-            return conex.selectQueryScalar(query);
-        }
-
-        public static string FoundClienteEstado(string estadoCliente)
-        {
-            ConexMySQL conex = new ConexMySQL();
-            conex.open();
-            string query = "SELECT rut FROM Cliente WHERE estado = '" + estadoCliente + "'";
             return conex.selectQueryScalar(query);
         }
 
