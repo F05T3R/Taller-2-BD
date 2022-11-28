@@ -19,6 +19,9 @@ namespace Taller_2_BD
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //NO ALCANZÓ EL TIEMPO PARA IMPLEMENTARLO
+
+            /*
             //Validar que todos los campos estén completados
             if (inputFechaCompra.Text != "" && inputDescuento.Text != "" && inputMontoFinal.Text != "" && inputRUTCliente.Text != "" && inputRUTVendedor.Text != "")
             {
@@ -35,6 +38,7 @@ namespace Taller_2_BD
 
                 }
             }
+            */
         }
 
         private void OrdenCompra_Load(object sender, EventArgs e)

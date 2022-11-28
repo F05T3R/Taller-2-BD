@@ -191,6 +191,8 @@ namespace Taller_2_BD
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();
@@ -201,6 +203,8 @@ namespace Taller_2_BD
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Hide();
@@ -210,6 +214,8 @@ namespace Taller_2_BD
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Hide();
@@ -219,6 +225,8 @@ namespace Taller_2_BD
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();
@@ -229,6 +237,8 @@ namespace Taller_2_BD
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();
@@ -239,6 +249,8 @@ namespace Taller_2_BD
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();
@@ -249,6 +261,8 @@ namespace Taller_2_BD
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();
@@ -259,6 +273,8 @@ namespace Taller_2_BD
 
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();
@@ -270,6 +286,8 @@ namespace Taller_2_BD
 
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Hide();
@@ -279,6 +297,9 @@ namespace Taller_2_BD
 
         private void radioButton10_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
+            this.comboBox2.DataSource = null;
+            this.dataGridView1.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox2.Items.Clear();
             this.comboBox1.Show();

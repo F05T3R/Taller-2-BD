@@ -113,6 +113,7 @@ namespace Taller_2_BD
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox1.Show();
             MyUtil.CategoriaList(comboBox1);
@@ -120,6 +121,7 @@ namespace Taller_2_BD
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox1.Show();
             MyUtil.ClienteList(comboBox1);
@@ -127,6 +129,7 @@ namespace Taller_2_BD
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox1.Show();
             MyUtil.ProveedorList(comboBox1);
@@ -134,12 +137,14 @@ namespace Taller_2_BD
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox1.Hide();
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
+            this.comboBox1.DataSource = null;
             this.comboBox1.Items.Clear();
             this.comboBox1.Show();
             MyUtil.ClienteList(comboBox1);
